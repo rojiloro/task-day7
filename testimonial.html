@@ -1,0 +1,55 @@
+<html>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <head>
+    <title>Testimonial</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/testimonial.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav>
+      <div class="left">
+        <ul>
+          <li class="item-collapse"><img src="assets/img/logo.png" alt="logo" class="logo" /></li>
+          <li class="item-collapse"><a href="index.html">Home</a></li>
+          <li class="item-collapse"><a href="myproject.html">My Project</a></li>
+          <li class="item-collapse"><a href="testimonial.html" class="active">Testimonial</a></li>
+        </ul>
+      </div>
+      <div class="right item-collapse">
+        <a href="contact.html">Contact Me</a>
+      </div>
+
+      <div class="nav-right item-collapse" id="barsmenu" onclick="openBurger()">
+        <button style="background-color: transparent; border: none; cursor: pointer">
+          <i class="fa-2x fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+
+    <div class="hamburger-nav-container" id="hamburger-nav-container">
+      <a href="index.html" class="hamburger-active">Home</a>
+      <a href="myproject.html">My Project</a>
+      <a href="testimonial.html">Testimonial</a>
+      <a href="contact.html"><button class="tombol">Contact</button></a>
+    </div>
+    <!-- body testimonial -->
+    <div class="container">
+        <h1>Testimonial</h1>
+        <section class="testimonials" id="testimonial">
+            <div class="testimonial">
+                <img src="assets/img/" alt="">
+            </div>
+        </section>
+    </div>
+    <script src="js/index.js"></script>
+    <script src="js/testimonial.js"></script>
+  </body>
+</html>

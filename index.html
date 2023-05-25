@@ -1,0 +1,65 @@
+<html>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <head>
+    <title>Personal Web</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <nav>
+      <div class="left">
+        <ul>
+          <li class="item-collapse"><img src="assets/img/logo.png" alt="logo" class="logo" /></li>
+          <li class="item-collapse"><a href="index.html" class="active">Home</a></li>
+          <li class="item-collapse"><a href="myproject.html">My Project</a></li>
+          <li class="item-collapse"><a href="testimonial.html">My Project</a></li>
+        </ul>
+      </div>
+      <div class="right item-collapse">
+        <a href="contact.html">Contact Me</a>
+      </div>
+
+      <div class="nav-right item-collapse" id="barsmenu" onclick="openBurger()">
+        <button style="background-color: transparent; border: none; cursor: pointer">
+          <i class="fa-2x fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+
+    <div class="hamburger-nav-container" id="hamburger-nav-container">
+      <a href="index.html" class="hamburger-active">Home</a>
+      <a href="myproject.html">My Project</a>
+      <a href="testimonial.html">My Project</a>
+      <a href="contact.html"><button class="tombol">Contact</button></a>
+    </div>
+
+    <div class="container">
+      <div class="c-left">
+        <h3>Hi Welcome to my profile</h3>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus harum ad neque sequi laboriosam repellat illum? Cumque, consequuntur eligendi animi doloribus error aliquam quisquam, debitis minus excepturi, eum illo sint?</p>
+        <a href="contact.html" class="kontak">Contact</a>
+        download cv <a href="#"><i class="fa-solid fa-arrow-down"></i></a>
+        <div class="icon">
+          <a href="https://www.linkedin.com/in/mohammad-fatkhuroji/"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://www.instagram.com/oji.id/?hl=id"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.facebook.com/ojilorotelu"><i class="fa-brands fa-facebook"></i></a>
+          <a href="https://twitter.com/eh_oji"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+      </div>
+      <div class="c-right">
+        <div class="card">
+          <img src="assets/img/img1.jpg" alt="foto saya" style="width: 100%; border-radius: 5px" />
+          <h3>Mohammad Fatkhuroji</h3>
+          <p>Fullstack Developer</p>
+        </div>
+      </div>
+    </div>
+    <script src="js/index.js"></script>
+  </body>
+</html>

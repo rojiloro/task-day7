@@ -1,0 +1,135 @@
+<html>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <head>
+    <title>My Project</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- <link rel="stylesheet" href="css/contact.css" /> -->
+    <link rel="stylesheet" href="css/project.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <nav>
+      <div class="left">
+        <ul>
+          <li class="item-collapse"><img src="assets/img/logo.png" alt="logo" class="logo" /></li>
+          <li class="item-collapse"><a href="index.html">Home</a></li>
+          <li class="item-collapse"><a href="myproject.html" class="active">My Project</a></li>
+        </ul>
+      </div>
+      <div class="right item-collapse">
+        <a href="contact.html">Contact Me</a>
+      </div>
+
+      <div class="nav-right item-collapse" id="barsmenu" onclick="openBurger()">
+        <button style="background-color: transparent; border: none; cursor: pointer">
+          <i class="fa-2x fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+
+    <div class="hamburger-nav-container" id="hamburger-nav-container">
+      <a href="index.html" class="hamburger-active">Home</a>
+      <a href="myproject.html">My Project</a>
+      <a href="contact.html"><button class="tombol">Contact</button></a>
+    </div>
+    <div class="project">
+      <div class="project-form">
+        <div class="form-container">
+          <form onsubmit="addProject(event)">
+            <h1>ADD MY PROJECT</h1>
+            <div>
+              <label for="input-project-name">Project Name</label>
+              <input type="text" id="input-project-name" />
+            </div>
+
+            <div class="input-date">
+              <div>
+                <label for="input-start-date">Start Date</label>
+                <input type="date" id="input-start-date" />
+              </div>
+              <div>
+                <label for="input-end-date">End Date</label>
+                <input type="date" id="input-end-date" />
+              </div>
+            </div>
+
+            <div>
+              <label for="description">Description</label>
+              <textarea id="description"></textarea>
+            </div>
+            <div>
+              <label for="tech">Technologies</label>
+              <div class="tech">
+                <div class="kotak">
+                  <label for="playstore">
+                    <input type="checkbox" id="playstore"> Playstore </input>
+                  </label>
+                  <label for="java">  
+                    <input type="checkbox" id="java" class="coba"> Java </input>
+                  </label>
+                </div>
+                
+                <div class="kotak2">
+                  <label for="android">
+                    <input type="checkbox" id="android"> Android </input>
+                  </label>
+                  <label for="react">  
+                    <input type="checkbox" id="react"> React </input>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div>
+              <label>Upload Image</label>
+                <div class="input-project-image-group">
+                <label for="input-project-image">
+                  <p>attach files</p>
+                  <img src="assets/img/file.png" alt="file" />
+                  <input type="file" id="input-project-image" hidden />
+                </label>
+              </div>
+            </div>
+            <div>
+              <button>Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <hr class="line">
+      <div class="tampil" id="tampil">
+        <h1>My Project</h1>
+        <div class="wadah" id="wadah">
+          <div class="card">
+            <img src="assets/img/phone.jpg" alt="phone">
+            <div class="spasi">
+              <a class="judul" href="project-detail.html"><p> Dumbways Mobile App - 2021</p></a>
+              <p class="durasi">durasi : 3 bulan</p>
+            </div>
+            <p class="detail">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste praesentium explicabo quae architecto aperiam at quis possimus voluptatibus ducimus minima.</p>
+            <div class="icon" id="icon">
+              <i class="fa-brands fa-google-play"></i>
+              <i class="fa-brands fa-android"></i>
+              <i class="fa-brands fa-java"></i>
+              <i class="fa-brands fa-react"></i>
+            </div>
+            <div class = "waktu">
+              <p>17, week 3, jan, 2023</p>
+            </div>
+            <div class="btn">
+              <button class="edit">Edit</button>
+              <button class="delete">Delete</button>
+            </div>
+          </div>
+        </div>
+      </div>            
+    </div>
+    <script src="js/project.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
