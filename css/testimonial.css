@@ -1,0 +1,32 @@
+.container-testimonial {
+  margin: 40px auto;
+}
+
+.container-testimonial h1 {
+  text-align: center;
+}
+
+.testimonials {
+  width: 900px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin: 20px;
+}
+
+.testimonial {
+  width: 500px;
+  margin: auto 30px;
+  padding-left: 40px;
+  border: 1px solid #fff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial img {
+  width: 100%;
+}
+
+.quote {
+  font-style: italic;
+}
