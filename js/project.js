@@ -11,10 +11,25 @@ function addProject(event) {
   let image = document.getElementById("input-project-image").files;
 
   // Mencari durasi project
-  let mulai = new Date(startDate);
-  let akhir = new Date(endDate);
-  let selisih = akhir.getTime() - mulai.getTime();
-  let durasi = Math.ceil(selisih / (1000 * 3600 * 24 * 30));
+  let date1 = new Date(startDate);
+  let date2 = new Date(endDate);
+  let selisih = date2 - date1;
+
+  let milisecond = 1000;
+  let secondInHours = 3600;
+  let hoursInDay = 24;
+  let dayInMonth = 30;
+
+  let distanceDay = Math.floor(selisih / (milisecond * secondInHours * hoursInDay));
+  let distanceMonth = Math.floor(selisih / (milisecond * secondInHours * hoursInDay * dayInMonth));
+  if (distanceDay > 0) {
+    console.log(distanceDay + " hari");
+  } else if (distanceDay > distanceMonth) {
+    console.log(distanceMonth + " bulan" + (distanceDay - distanceMonth) + " hari");
+  } else if (distanceDay < 0) {
+    alert("tanggal yang dimasukan salah");
+  }
+
 
   // icon
   const playstorejsIcon = '<i class="fa-brands fa-google-play"></i>';
@@ -39,7 +54,8 @@ function addProject(event) {
     nama,
     startDate,
     endDate,
-    durasi,
+    distanceDay,
+    distanceMonth,
     cbPlaystorejs,
     cbAndroidjs,
     cbJavajs,
@@ -65,7 +81,7 @@ function renderProject() {
             <img src="${dataProject[index].imageURL}" alt="tampil">
             <div class="spasi">
               <a class="judul" href="project-detail.html"><p> ${dataProject[index].nama}</p></a>
-              <p class="durasi">durasi : ${dataProject[index].durasi} bulan</p>
+              <p class="durasi">durasi : ${dataProject[index].distanceMonth} bulan ${dataProject[index].distanceDay} hari</p>
             </div>
             <p class="detail">${dataProject[index].description}</p>
             <div class="icon" id="icon">
@@ -106,3 +122,4 @@ function getFullTime(time) {
   return `date ${tanggal} , ${pekan} , ${bulan[indexBulan]} , ${tahun}`;
   console.log(time);
 }
+
